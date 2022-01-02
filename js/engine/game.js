@@ -29,6 +29,12 @@ class Game {
 		ctx.fillStyle = '#000000';
 		//左上から、画面のサイズまでを、塗りつぶす
 		ctx.fillRect( 0, 0, this.canvas.width, this.canvas.height );
+		
+				//ゲームに登場する全てのもの（オブジェクト）の数だけ繰り返す
+		for ( let i=0; i<this.objs.length; i++ ) {
+			//スプライトやテキストなど、すべてのオブジェクトのupdateメソッドを呼び出す
+			this.objs[i].update( this.canvas );
+		}
 
 		//自分自身（_mainLoop）を呼び出して、ループさせる
 		requestAnimationFrame( this._mainLoop.bind( this ) );
