@@ -39,5 +39,15 @@ class Game {
 		//自分自身（_mainLoop）を呼び出して、ループさせる
 		requestAnimationFrame( this._mainLoop.bind( this ) );
 	} //_mainLoop() 終了
+		/**
+	 * オブジェクトをゲームに追加できるようになる、addメソッドを作成
+	 *
+	 * 引数
+	 * obj : 追加したいオブジェクト
+	 */
+	add( obj ) {
+		//this.objs配列の末尾に、objの値を追加
+		this.objs.push( obj );
+	} //add() 終了
   
 }
