@@ -1,1 +1,3 @@
-document.write( 'ゲームエンジン' );
+'use strict'
+class Game {
+}
